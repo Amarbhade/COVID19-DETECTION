@@ -1,0 +1,54 @@
+
+<!doctype html>
+
+<html lang="en" class="oldie">
+<style>
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+ button{
+                    width: 150px;
+                    align-content: center;
+                    background-color: GREY ;
+                    color: azure;
+                    height: 50px;
+                    font-weight: bold;
+
+                }
+
+.form-group {
+  max-width: 200px;
+  margin: auto;
+  margin-bottom: 0px;
+}
+
+
+</style>
+
+<html lang="en">
+
+<body bgcolor="blue">
+<CENTER><h1 style="color:YELLOW"><B>COVID-19  DETECTOR<B></B></h1></CENTER><hr>
+<CENTER><h1 style="color:yellow">UPLOAD CHEST (X-RAY) IMAGE 👇</h1></CENTER>
+<form action="/predict" method="post" enctype="multipart/form-data">
+  <div class="form-group file-area">
+
+       <label ></label>
+      <H1><input type="file"  name="myfile"></H1><H1>
+       <p><button STYLE="COLOR:white" type="submit" > PREDICTIONS</button>
+  </div>
+
+            <center><b><h1 STYLE="COLOR:RED"> {{ result}}</h1></b></center>
+    <center><img src="{{IMAGE_PATH}}"></center>
+
+</form>
+
+
+
+
+
+</body>
+</html>
